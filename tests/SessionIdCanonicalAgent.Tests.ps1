@@ -15,7 +15,9 @@ Describe 'Canonical PascalCase agent + openSession persistence' {
         Get-ReplCanonicalAgentName 'claude-code' | Should -Be 'ClaudeCode'
         Get-ReplCanonicalAgentName 'claudecode' | Should -Be 'ClaudeCode'
         Get-ReplCanonicalAgentName 'codex' | Should -Be 'Codex'
-        Get-ReplCanonicalAgentName 'grok' | Should -Be 'GrokCode'
+        Get-ReplCanonicalAgentName 'grok' | Should -Be 'GrokBot'
+        Get-ReplCanonicalAgentName 'grok-bot' | Should -Be 'GrokBot'
+        Get-ReplCanonicalAgentName 'grokbot' | Should -Be 'GrokBot'
     }
 
     It 'openSession persists the explicit sessionId into session-state.yaml' {

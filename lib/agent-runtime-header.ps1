@@ -36,7 +36,7 @@ function Get-McpPluginAgentExecutableCandidates {
         { $_ -in @('codex') } { $candidates.Add('codex'); $candidates.Add('codex.cmd') }
         { $_ -in @('claude', 'claudecode') } { $candidates.Add('claude'); $candidates.Add('claude.cmd') }
         { $_ -in @('claudecowork') } { $candidates.Add('claude'); $candidates.Add('claude.cmd') }
-        { $_ -in @('grok', 'grokcode') } { $candidates.Add('grok'); $candidates.Add('grok.cmd') }
+        { $_ -in @('grok', 'grokcode', 'grokbot') } { $candidates.Add('grok'); $candidates.Add('grok.cmd') }
         { $_ -in @('copilot') } { $candidates.Add('github-copilot'); $candidates.Add('copilot') }
         { $_ -in @('cline', 'clinev2') } { $candidates.Add('cline'); $candidates.Add('cline.cmd') }
         { $_ -in @('opencode') } { $candidates.Add('opencode'); $candidates.Add('opencode.cmd') }
@@ -163,7 +163,7 @@ function Resolve-McpPluginAgentHeaderFields {
     switch -Regex ($hostKey) {
         '^(codex)$' { if ($env:CODEX_SESSION_ID) { [void]$sessionIdCandidates.Add($env:CODEX_SESSION_ID) } }
         '^(claude|claude-code|claudecode)$' { if ($env:CLAUDE_SESSION_ID) { [void]$sessionIdCandidates.Add($env:CLAUDE_SESSION_ID) } }
-        '^(grok|grokcode|grok-code)$' { if ($env:GROK_SESSION_ID) { [void]$sessionIdCandidates.Add($env:GROK_SESSION_ID) } }
+        '^(grok|grokcode|grok-code|grokbot|grok-bot)$' { if ($env:GROK_SESSION_ID) { [void]$sessionIdCandidates.Add($env:GROK_SESSION_ID) } }
         default {
             if ($env:CODEX_SESSION_ID) { [void]$sessionIdCandidates.Add($env:CODEX_SESSION_ID) }
             if ($env:CLAUDE_SESSION_ID) { [void]$sessionIdCandidates.Add($env:CLAUDE_SESSION_ID) }
@@ -187,7 +187,7 @@ function Resolve-McpPluginAgentHeaderFields {
             if ($env:CLAUDE_TRANSCRIPT_PATH) { [void]$transcriptCandidates.Add($env:CLAUDE_TRANSCRIPT_PATH) }
             if ($env:CLAUDE_SESSION_FILE) { [void]$transcriptCandidates.Add($env:CLAUDE_SESSION_FILE) }
         }
-        '^(grok|grokcode|grok-code)$' {
+        '^(grok|grokcode|grok-code|grokbot|grok-bot)$' {
             if ($env:GROK_TRANSCRIPT_PATH) { [void]$transcriptCandidates.Add($env:GROK_TRANSCRIPT_PATH) }
             if ($env:GROK_SESSION_FILE) { [void]$transcriptCandidates.Add($env:GROK_SESSION_FILE) }
         }

@@ -47,7 +47,7 @@ NoTurn
 
 When the MCP server is unavailable, pending REPL calls are buffered to the workspace failsafe cache:
 
-**v4 layout:** `<workspace_root>/.mcpServer/failsafe/GrokCode/workspaces/<base64url(workspacePath)>/`
+**v4 layout:** `<workspace_root>/.mcpServer/failsafe/GrokBot/workspaces/<base64url(workspacePath)>/`
 - `pending/` - queued entries, max 3 retries
 - `failed/` - entries exceeding retry limit
 
@@ -71,8 +71,9 @@ repositories share this enforcement protocol version.
 
 ## Agent Identity
 
-This plugin targets the `GrokCode` agent (`sourceType: GrokCode`). Session IDs use the prefix
-`GrokCode-<yyyyMMddTHHmmssZ>-<suffix>`. The required env var is `GROK_PLUGIN_ROOT`.
+This plugin targets Grok Bot cloud instances (`sourceType: GrokBot`). Session IDs use the prefix
+`GrokBot-<yyyyMMddTHHmmssZ>-<suffix>`. The required env var is `GROK_PLUGIN_ROOT`.
+Set `PLUGIN_AGENT_NAME=GrokBot`. Host keys `grok`, `grok-bot`, and `grokbot` resolve to `GrokBot`.
 
 ## References
 

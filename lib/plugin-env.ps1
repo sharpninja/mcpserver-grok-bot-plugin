@@ -56,8 +56,8 @@ switch ($host_) {
         $rootChain = @($env:MCP_PLUGIN_ROOT, $env:PLUGIN_ROOT, $env:CLAUDE_PLUGIN_ROOT)
         $startChain = @($env:COPILOT_WORKSPACE_PATH, $env:COPILOT_PROJECT_DIR, $env:MCPSERVER_WORKSPACE_PATH, $env:MCP_WORKSPACE_PATH)
     }
-    'grok' {
-        $agent = 'GrokCode'; $model = 'grok'; $tag = 'grok'; $outputMode = 'hook'
+    { $_ -in 'grok', 'grok-bot', 'grokbot' } {
+        $agent = 'GrokBot'; $model = 'grok'; $tag = 'grok'; $outputMode = 'hook'
         $rootChain = @($env:MCP_PLUGIN_ROOT, $env:GROK_PLUGIN_ROOT, $env:PLUGIN_ROOT, $env:CLAUDE_PLUGIN_ROOT)
         $startChain = @($env:GROK_WORKSPACE_PATH, $env:GROK_PROJECT_DIR, $env:CLAUDE_PROJECT_DIR, $env:MCPSERVER_WORKSPACE_PATH, $env:MCP_WORKSPACE_PATH)
     }

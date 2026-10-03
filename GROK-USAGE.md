@@ -28,13 +28,16 @@ The skills and hooks implement (or guide) the exact flow required by the workspa
 
 See `hooks/scripts/session-start.sh` (and the Grok skills) for the reference implementation. On Grok, the skills perform equivalent checks where possible and fall back gracefully to `MCP_UNTRUSTED` / local-only mode when the server is unavailable (as required by policy).
 
-## Session / Turn Lifecycle (GrokCode)
+## Session / Turn Lifecycle (GrokBot)
+
+This fork is for Grok Bot cloud instances. It was forked from `mcpserver-grok-plugin`. Cloud instances clone this repository and identify as `GrokBot`. The workspace marker supplies the MCP base URL. `.mcp.json` defaults to `http://localhost:7147/mcp-transport` for an MCP Server on the same host.
 
 Use the **session** skill (or the plugin shim for the underlying `workflow.sessionlog.*` methods) with the canonical naming:
 
-- SessionId: `GrokCode-YYYYMMDDTHHMMSSZ-slug`
+- SessionId: `GrokBot-YYYYMMDDTHHMMSSZ-slug`
 - RequestId: `req-YYYYMMDDTHHMMSSZ-slug`
-- `sourceType` / agent prefix: `GrokCode` (Pascal-Case)
+- `sourceType` / agent prefix: `GrokBot` (Pascal-Case)
+- `PLUGIN_AGENT_NAME`: `GrokBot`
 
 All design decisions must be logged as `appendDialog` (category: decision) **and** `appendActions` (type: design_decision).
 
@@ -70,7 +73,7 @@ MIT (same as source).
 
 ---
 
-Maintained as part of the McpServer workspace agent plugin ecosystem. The Grok contract has been registered in `MarkerFileService.BuildDefaultAgentPlugins`. After the next McpServer restart, `AGENTS-README-FIRST.yaml` will include the `Grok` entry and instruct GrokCode agents to bootstrap `mcpserver-grok-plugin` automatically.
+Maintained as part of the McpServer workspace agent plugin ecosystem. Grok Bot cloud instances bootstrap `mcpserver-grok-bot-plugin`. The local Grok CLI continues to use `mcpserver-grok-plugin` and `GrokCode`.
 
 ## External research (Perplexity)
 

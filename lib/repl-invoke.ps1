@@ -76,8 +76,9 @@ function Get-ReplCanonicalAgentName {
         'claudecowork' { return 'ClaudeCowork' }
         'codex'        { return 'Codex' }
         'copilot'      { return 'Copilot' }
-        'grok'         { return 'GrokCode' }
-        'grokcode'     { return 'GrokCode' }
+        'grok'         { return 'GrokBot' }
+        'grokcode'     { return 'GrokBot' }
+        'grokbot'      { return 'GrokBot' }
         'cline'        { return 'Cline' }
         'clinev2'      { return 'Cline' }
         'opencode'     { return 'OpenCode' }

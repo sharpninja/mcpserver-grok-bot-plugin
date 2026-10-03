@@ -1,13 +1,13 @@
 {
   "name": "mcpserver-grok",
   "version": "1.118.0",
-  "description": "Connect Grok CLI/TUI agents to McpServer for session logging, TODO management, requirements tracking, and workspace continuity.",
+  "description": "Connect Grok Bot cloud instances to McpServer for session logging, TODO management, requirements tracking, and workspace continuity.",
   "author": {
     "name": "Payton Byrd (The Sharp Ninja)",
     "url": "https://github.com/sharpninja"
   },
-  "homepage": "https://github.com/sharpninja/mcpserver-grok-plugin",
-  "repository": "https://github.com/sharpninja/mcpserver-grok-plugin",
+  "homepage": "https://github.com/sharpninja/mcpserver-grok-bot-plugin",
+  "repository": "https://github.com/sharpninja/mcpserver-grok-bot-plugin",
   "license": "MIT",
   "keywords": [
     "mcp",

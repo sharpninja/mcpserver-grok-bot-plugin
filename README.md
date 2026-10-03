@@ -1,6 +1,8 @@
-# McpServer Grok Plugin
+# McpServer Grok Bot Plugin
 
-Connect [Grok 4.3](https://x.ai) coding agent CLI / TUI to [McpServer](https://github.com/sharpninja/McpServer) for workspace-scoped TODO management, session logging, requirements tracking, GraphRAG, and full agent session continuity.
+Fork of [mcpserver-grok-plugin](https://github.com/sharpninja/mcpserver-grok-plugin) for Grok Bot cloud instances. Cloud instances clone this repository, set `PLUGIN_AGENT_NAME=GrokBot`, and use the workspace marker for the MCP base URL.
+
+Connect those instances to [McpServer](https://github.com/sharpninja/McpServer) for workspace-scoped TODO management, session logging, requirements tracking, GraphRAG, and full agent session continuity. Session source type is `GrokBot`.
 
 ## Features
 
