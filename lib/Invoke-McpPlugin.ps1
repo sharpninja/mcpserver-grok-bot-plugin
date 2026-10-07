@@ -162,7 +162,6 @@ function Resolve-McpPluginHostName {
         'mcpserver-claude-code-plugin|claude-code' { return 'claude-code' }
         'mcpserver-codex-plugin|/codex(?:/|$)' { return 'codex' }
         'mcpserver-copilot-plugin|/copilot(?:/|$)' { return 'copilot' }
-        'mcpserver-grok-bot-plugin|grok-bot' { return 'grok' }
         'mcpserver-grok-plugin|/grok(?:/|$)' { return 'grok' }
         'mcpserver-cline-v2-plugin|cline-v2' { return 'cline-v2' }
         'mcpserver-cline-plugin|/cline(?:/|$)' { return 'cline' }
@@ -188,8 +187,8 @@ function Get-McpPluginHostDefaults {
         'copilot' {
             return [ordered]@{ Host = 'copilot'; Agent = 'Copilot'; Model = 'copilot'; Tag = 'copilot' }
         }
-        { $_ -in 'grok', 'grok-bot', 'grokbot' } {
-            return [ordered]@{ Host = 'grok'; Agent = 'GrokBot'; Model = 'grok'; Tag = 'grok' }
+        'grok' {
+            return [ordered]@{ Host = 'grok'; Agent = 'GrokCode'; Model = 'grok'; Tag = 'grok' }
         }
         'cline' {
             return [ordered]@{ Host = 'cline'; Agent = 'Cline'; Model = 'cline'; Tag = 'cline' }
