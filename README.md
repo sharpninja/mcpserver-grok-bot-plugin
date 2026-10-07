@@ -1,8 +1,8 @@
-# McpServer Grok Bot Plugin
+# QBrain.AI Grok Bot Plugin
 
 Fork of [mcpserver-grok-plugin](https://github.com/sharpninja/mcpserver-grok-plugin) for Grok Bot cloud instances. Cloud instances clone this repository, set `PLUGIN_AGENT_NAME=GrokBot`, and use the workspace marker for the MCP base URL.
 
-Connect those instances to [McpServer](https://github.com/sharpninja/McpServer) for workspace-scoped TODO management, session logging, requirements tracking, GraphRAG, and full agent session continuity. Session source type is `GrokBot`.
+Connect those instances to [QBrain.AI](https://github.com/sharpninja/McpServer) for workspace-scoped TODO management, session logging, requirements tracking, GraphRAG, and full agent session continuity. Session source type is `GrokBot`.
 
 ## Features
 
@@ -16,9 +16,9 @@ Connect those instances to [McpServer](https://github.com/sharpninja/McpServer) 
 
 - [.NET 9.0 SDK](https://dotnet.microsoft.com/download)
 - [GitHub CLI](https://cli.github.com/) (`gh`) — authenticated
-- [McpServer](https://github.com/sharpninja/McpServer) running with a workspace configured
+- [QBrain.AI](https://github.com/sharpninja/McpServer) running with a workspace configured
 
-The plugin auto-installs `mcpserver-repl` (dotnet global tool) from GitHub releases on first use.
+The plugin uses `qbrain-ai-repl` when it is installed and otherwise `mcpserver-repl`. It auto-installs a REPL (dotnet global tool) from GitHub releases on first use.
 
 ## Installation
 
