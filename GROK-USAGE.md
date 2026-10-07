@@ -30,7 +30,7 @@ See `hooks/scripts/session-start.sh` (and the Grok skills) for the reference imp
 
 ## Session / Turn Lifecycle (GrokBot)
 
-This fork is for Grok Bot cloud instances. It was forked from `mcpserver-grok-plugin`. Cloud instances clone this repository and identify as `GrokBot`. The workspace marker supplies the MCP base URL. `.mcp.json` defaults to `http://localhost:7147/mcp-transport` for an MCP Server on the same host.
+This fork is for Grok Bot cloud instances. It was forked from `mcpserver-grok-plugin`. Cloud instances clone this repository and identify as `GrokBot`. The workspace marker supplies the MCP base URL. `.mcp.json` defaults to `http://localhost:7147/mcp-transport` for an QBrain.AI on the same host.
 
 Use the **session** skill (or the plugin shim for the underlying `workflow.sessionlog.*` methods) with the canonical naming:
 

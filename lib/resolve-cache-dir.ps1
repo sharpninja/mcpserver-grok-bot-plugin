@@ -44,8 +44,6 @@ function Get-McpCacheAgentKey {
         'grok' { return 'grok' }
         'grokcode' { return 'grok' }
         'grok-code' { return 'grok' }
-        'grokbot' { return 'grok' }
-        'grok-bot' { return 'grok' }
         'cline' { return 'cline' }
         'cline-v2' { return 'cline' }
         'opencode' { return 'opencode' }
